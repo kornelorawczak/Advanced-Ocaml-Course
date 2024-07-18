@@ -1,0 +1,7 @@
+var x
+begin 
+  try 
+    x := z + 5
+  with 
+    write x
+end

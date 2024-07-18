@@ -1,0 +1,8 @@
+function foo(x)
+    begin 
+        x := 1
+        return x 
+        write x
+    end 
+
+write foo(2)

@@ -1,0 +1,12 @@
+var x
+
+function f(x)
+    begin
+        return x
+    end
+
+begin
+    x := 1
+    if x = 1 then if x = 1 then if x = 1 then if x = 2 or (x = 2 or (f(x) = 1 and x = 1)) then if not (x = 0 and x/0 = 1) then x := 1 else x := 0 else x := 0 else x := 0 else x := 0 else x := 0
+    write x
+end

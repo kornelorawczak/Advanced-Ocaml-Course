@@ -1,0 +1,4 @@
+match (13, 42) with 
+| (x, y) & (a, b) when x < y && a = 13 -> (x, b)
+| _ -> (0, 0)
+end 

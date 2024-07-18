@@ -1,0 +1,11 @@
+var z 
+
+function f1(x, y)
+    function f2()
+    return 15
+    return x + f2() + y
+
+begin 
+    z := f1(2, 3)
+    write z
+end

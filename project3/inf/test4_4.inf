@@ -1,0 +1,10 @@
+function foo(x)
+    var y 
+    begin 
+        x := x - 1
+        if (x = 0) then return 2 
+        else return foo(x)
+        y := 0
+    end 
+
+write foo(2)

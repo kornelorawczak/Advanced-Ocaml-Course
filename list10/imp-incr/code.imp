@@ -1,0 +1,11 @@
+var x
+var post
+var pre
+begin
+    x := 10
+    pre := ++x
+    post := x++
+    write x 
+    write pre 
+    write post 
+end 

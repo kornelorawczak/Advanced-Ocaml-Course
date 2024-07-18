@@ -1,0 +1,19 @@
+var x
+
+function f1()
+    function f11()
+        function test()
+        return 5
+    return test() + 6 
+
+    function f12()
+        function test()
+        return 6 
+    return test() + 6
+
+return f11()
+
+begin 
+    x := f1()
+    write x
+end

@@ -1,0 +1,4 @@
+match Cons(15, Nil()) with
+| (x, y) | Cons(_, xs) -> 42
+| _ -> 0
+end

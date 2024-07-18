@@ -1,0 +1,19 @@
+
+
+begin
+    var x
+    var y
+    var z
+    x := 42
+    z:=100
+    write y
+    write z
+    begin
+        var x
+        var y 
+        y:=56
+        write x
+        write y
+    end
+    write x
+end

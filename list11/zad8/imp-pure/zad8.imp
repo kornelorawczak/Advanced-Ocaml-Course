@@ -1,0 +1,7 @@
+var x 
+begin
+  try 
+    raise 
+  with 
+    write x
+end

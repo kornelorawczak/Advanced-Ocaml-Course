@@ -1,0 +1,30 @@
+let insert = fix (fun insert -> fun tree -> fun value -> 
+                  match tree with 
+                  | Nil() -> Tree(Nil(), value, Nil())
+                  | Tree(l, v, r) -> if value < v then Tree(insert l value, v, r) else Tree(l, v, insert r value) 
+                  end) in 
+
+let flatten = fun t -> 
+    let iter = fix (fun iter -> fun tree -> fun acc -> 
+                    match tree with 
+                    | Nil() -> acc 
+                    | Tree(l, v, r) -> iter l (Cons(v, iter r acc))
+                    end) in 
+    iter t (Nil()) in 
+
+
+
+let sort = fun xs -> 
+    let iter = fix (fun iter -> fun xs -> fun tree -> 
+                    match xs with 
+                    | Nil() -> flatten tree 
+                    | Cons(x, xss) -> iter xss (insert tree x)
+                    end) in 
+    iter xs (Nil()) in 
+
+let test_list = Cons(5, Cons(2, Cons(9, Cons(0, Nil())))) in 
+
+sort test_list 
+
+
+    

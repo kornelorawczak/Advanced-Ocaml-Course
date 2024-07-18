@@ -1,0 +1,24 @@
+# dune exec match zad2.match
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Shared cache location: /Users/kornelorawczak/.cache/dune/db
+# Workspace root:
+# /Users/kornelorawczak/Documents/studia/sem2/mp/lista13/zad2/match
+# Auto-detected concurrency: 4
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; installed_env =
+#      map
+#        { "INSIDE_DUNE" :
+#            "/Users/kornelorawczak/Documents/studia/sem2/mp/lista13/zad2/match/_build/default"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; instrument_with = []
+#  }
+$ /usr/local/bin/ocamlc.opt -config > /var/folders/pt/120626514sj_lgs4_d10nxjm0000gn/T/dune_d2ef01_output

@@ -82,8 +82,7 @@ let premature_col_verification (pss : int list list) (xss : bool list list) (len
       | [], _ | _, [] -> true 
       | ps :: pss', xs :: xss' -> 
         if ps = [] then 
-          if check_column [] xs 0 0 len then check_columns pss' xss' 
-          else false 
+          if check_column [] xs 0 0 len then check_columns pss' xss' else false 
         else if check_column (List.tl ps) xs 0 (List.hd ps) len then check_columns pss' xss'
         else false 
 
@@ -97,7 +96,7 @@ let rec transpose (xss : 'a list list) : 'a list list =
 
 (* main solving function that uses backtracking and premature_col_verification function 
    in order to check before adding any new row if it will make sense, 
-   meaning whether current rows added will enable column specification to be met *)
+   meaning whether current rows added will enable column specification to be met in the future *)
 let solve_nonogram (nono : nonogram_spec) = 
 
   if List.length (nono.rows) = 0 
@@ -184,6 +183,8 @@ let rec build_candidate (pss : int list list) (n : int) : bool list list list =
     let* built = build_row ps n in 
     let* rest = build_candidate pss' n in 
     [built :: rest] 
+
+
 
 
 

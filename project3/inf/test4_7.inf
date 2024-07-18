@@ -1,0 +1,29 @@
+var x
+var n
+
+function incr_x(y)
+begin
+  x := x + y
+  return x
+end
+
+function foo(x)
+  function bar(y)
+  begin
+    if y = 0 then
+      return foo(x - 1)
+    else
+      return incr_x(bar(y - 1))
+  end
+begin
+  if x = 0 then
+    return incr_x(1)
+  else
+    return bar(x - 1)
+end
+
+begin
+  x := 0
+  read n
+  write foo(n)
+end

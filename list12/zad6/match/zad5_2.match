@@ -1,0 +1,3 @@
+match Cons(5, Cons(6, Cons(7, Nil()))) with 
+    | Cons(x, Cons(y, Cons(x, xss))) -> x
+end
